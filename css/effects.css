@@ -1,0 +1,82 @@
+/***********************icons*********************** */
+
+.skills_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill_img {
+
+    height: 150px;
+}
+
+figure.skills_icon--effect img {
+	width: calc(100% + 20px);
+	transition: opacity 0.35s, transform 0.35s;
+	transform: scale(1.1);
+	backface-visibility: hidden;
+}
+
+figure.skills_icon--effect:hover img {
+	opacity: 0.4;
+	transform: translate3d(0,0,0);
+}
+figure.skills_icon--effect figcaption {
+	text-align: center;
+}
+
+
+/********************gradient******************* */
+
+.skills_progress--bar{
+	width: 100%;
+	max-width: 260px;
+	height: 5px;
+	background: #e1e4e8;
+	margin-right: 40px;
+	overflow: visible;
+	position: relative;
+	height: 25px;
+	border-radius: 20px;
+	line-height: 15px;
+	margin-top: 6px;
+}  
+
+.bar--gradient{
+	display: block;
+	border-radius: 20px;
+	height: 100%;
+	background: linear-gradient(90deg,#f7336e, #f36755, #ff1f44, #ff3636,#ff709b, #714eef, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	background-size: 300% 100%;
+	animation: progress-animation 5s linear infinite;
+}
+  
+  
+.progress-value{
+	position: absolute;
+	right: 1px;
+	color:var(--scarlet);
+	font-weight: 800;
+	padding: 7px;
+	border-radius: 25px;
+	border-top: 10px;
+}
+
+	  
+@keyframes progress-animation {
+	0%{
+	background-position: 100%}
+	100%{
+	background-position: 0}
+}
+
+/********************hobby******************* */
+
+.hobby_girl{
+	transition: all 0.4s ease-out;
+}
+	
+.hobby_girl:hover{
+	transform: scale(1.1);
+}

@@ -1,0 +1,42 @@
+:root {
+    --dark_bg: #303133;
+    --shadow:0 0 5px #080808;
+    --shadow2:0 0 13px #1d2225;
+}
+
+
+body.dark {
+    background: var(--dark_bg);
+    color: var(--white);
+}
+
+span.dark{
+    color: var(--white);
+}
+
+
+body.dark .content {
+    box-shadow: var(--shadow);  
+}
+
+body.dark button {
+    box-shadow: var(--shadow); 
+    color: var(--white);
+
+}
+
+body.dark button:hover {
+    box-shadow: var(--shadow2);
+    
+}
+
+#toggleBtn,.button_red {
+    border-radius:60px;
+    padding: 14px;
+}
+
+button:hover {
+    box-shadow: 0 0 10px silver;
+}
+
+

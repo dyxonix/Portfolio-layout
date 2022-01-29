@@ -1,0 +1,326 @@
+:root {
+    --white:#fff;
+    --gray:#8b8a8a;
+    --text_gray:#303133;
+    --scarlet:#FE3B3B;
+    --shadow: 0px 5px 14px 2px rgba(34, 60, 80, 0.08);
+    --container:40px auto;
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    background-color: var(--white);
+    font-family: 'Montserrat', sans-serif, Arial;
+    color: var(--text_gray);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+a , p, h1, h2, h3, p, ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+.container {
+    max-width: 970px;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+
+/*************************buttons*********************** */
+
+button {
+    font: inherit;
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    box-shadow: 0 0 5px silver;
+    cursor: pointer;
+    outline: none; 
+    color:var(--text_gray);
+}
+
+.button_red {
+    background-color: var(--scarlet);
+    color: var(--white);
+}
+
+
+/******************************text************************** */
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 26px;
+    margin: var(--container);
+}
+
+h3 {
+    color:var(--scarlet);
+    font-size: 21px;
+    margin: 10px 0;
+
+}
+
+.title_center {
+    text-align: center;
+    font-size: 26px;
+}
+
+/******************************media************************** */
+
+@media(max-width:1004px) {
+    
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .contacts_card{
+        display: flex;
+        flex-direction: column;     
+    }
+
+    .training_buttons {
+        flex-direction: column;
+    }
+
+    .skills_progress_item{
+        flex-direction: column;
+    }
+
+} 
+
+@media(max-width:768px) {
+
+
+    .container {
+        max-width: 500px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .training_buttons {
+        flex-direction: column;
+    }
+
+    ul{
+        text-align: left;
+    }
+
+    .training_items {
+        flex-direction: column;
+        
+    }
+    .skill_img{
+        max-width: 77px;
+    }
+    
+    .hobby_content{
+        flex-direction: column;
+    }
+    .hobby_girl{
+        margin: 0 auto;
+    }
+    
+}
+/**************************contacts************************ */
+
+.contacts_item{
+    display: flex;
+}
+
+.contacts_icon{
+	width: 25px;
+    float: left;
+    margin: 5px 9px 0 0;
+}
+
+
+.contacts_card{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contacts_description {
+    font-size: 29px;
+    margin-bottom: 20px;
+    color:var(--scarlet);
+}
+
+.contacts_img {
+    max-width:250px;
+    margin: auto;
+}
+
+.photo{
+    border-radius:50%;
+}
+
+
+a:focus {
+    border-radius:20px;
+    outline: 2px solid var(--scarlet);
+
+}
+
+.contacts_block{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/***********************motivation***************************** */
+
+
+.motivation--border{
+    padding: 60px;
+    box-shadow: 0px 5px 14px 2px rgba(14, 13, 13, 0.08);
+    border: 1px solid rgba(14, 11, 11, 0.08);
+    border-radius: 100px;
+}
+
+/*****************************skills*************************** */
+
+
+.skills_progress{
+    margin: var(--container);
+    columns:2;
+}
+
+
+.skills_progress_item{
+
+    margin-bottom:25px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.skills_progress_text{
+    min-width: 160px;
+}
+
+#rectangle {
+    height: 2px;
+    flex: 0.5;
+    background: var(--gray);
+    opacity:0.3;
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*************************training********************* */
+
+.training_buttons {
+    display: flex;
+    justify-content:space-between;
+
+}
+
+.training_btn {
+    border: 1px solid transparent;
+    min-width: 260px;
+
+}
+
+.training_btn.active {
+    color: var(--scarlet);
+    border-bottom: 1px solid var(--scarlet);
+}
+
+
+.training_content {
+    display: none;
+}
+
+.training_content.active {
+    min-height:32rem;
+    margin:var(--container);
+    display: block;
+}
+
+
+.point_list{
+    list-style: unset;
+    margin-left:25px;
+    margin-top: 30px;
+}
+
+
+/******************* hobby *********************/
+
+.hobby_container{
+    margin-bottom: 10rem;
+}
+
+.hobby_content{
+    display: flex;
+}
+.hobby_girl{
+    margin-right: 30px;
+    background-size:300px;
+    width: 350px;
+    height: 350px;
+}
+
+
+/******************* footer *********************/
+
+
+.footer {
+    background: var(--scarlet);
+    padding: 25px 0;
+    color: var(--white);
+    
+}
+
+.social-link {
+    margin-left: 15px;
+    text-decoration:none;
+}
+
+.social-link:focus {
+    border-radius:50px;
+    height: 30px;
+    width: 30px;
+    display: inline-flex;   
+    outline: 3px solid var(--white);
+
+}
+
+/********** footer **********/
