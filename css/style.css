@@ -13,7 +13,7 @@ html {
 }
 
 
-body {
+body,html {
     margin: 0;
     background-color: var(--white);
     font-family: 'Montserrat', sans-serif, Arial;
