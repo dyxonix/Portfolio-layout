@@ -13,7 +13,7 @@ html {
 }
 
 
-body,html {
+body {
     margin: 0;
     background-color: var(--white);
     font-family: 'Montserrat', sans-serif, Arial;
@@ -269,7 +269,7 @@ a:focus {
 }
 
 .training_content.active {
-    min-height:32rem;
+    min-height:460px;
     margin:var(--container);
     display: block;
 }
@@ -285,7 +285,7 @@ a:focus {
 /******************* hobby *********************/
 
 .hobby_container{
-    margin-bottom: 10rem;
+    margin-bottom: 80px;
 }
 
 .hobby_content{
