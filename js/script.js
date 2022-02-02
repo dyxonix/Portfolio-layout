@@ -1,11 +1,24 @@
-if (!localStorage.theme) localStorage.theme = "light"
-document.body.className = localStorage.theme
-toggleBtn.innerText = document.body.classList.contains("dark") ? "Сменить тему на светлую" : "Сменить тему на тёмную"
-
-toggleBtn.onclick = () => {
-    document.body.classList.toggle("dark")
-    toggleBtn.innerText = document.body.classList.contains("dark") ? "Сменить тему на светлую" : "Сменить тему на тёмную"
-    localStorage.theme = document.body.className || "light"
+isDarkTheme = () => {
+    return document.body.classList.contains("dark");
 }
 
+
+if (localStorage.getItem("darkTheme")==="true") {
+   document.body.classList.add('dark');
+    
+};
+
+changeActiveText = () => { 
+   return isDarkTheme() ? "Сменить тему на светлую" : "Сменить тему на тёмную";
+    
+}
+
+toggleBtn.innerHTML = changeActiveText();
+
+toggleBtn.onclick = () => {
+
+    document.body.classList.toggle("dark")
+    toggleBtn.innerText = changeActiveText();
+    localStorage.setItem('darkTheme', isDarkTheme());
+}
 
